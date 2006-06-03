@@ -2,35 +2,38 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/xercesImpl-2.5.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-beanutils-1.6.1.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-codec-1.2.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-collections-3.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-digester-1.5.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-el-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-fileupload-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/commons-validator.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/hsqldb.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/jakarta-oro.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/javassist-3.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/jsp-2.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/jta.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/junit-3.8.1.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/myfaces-1.0.9.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/nekohtml-0.9.3-nirvana.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/ognl-2.6.5.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/poi-2.5.1-final-20040804.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/s2-dao-1.0.29.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/s2-jsf-1.0.13.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/hessian-3.0.8.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/geronimo-j2ee_1.4_spec-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/geronimo-jta_1.0.1B_spec-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/s2-extension-2.3.9.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/s2-extension-2.3.9-sources.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/s2-framework-2.3.9.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian-client/lib/s2-framework-2.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-el-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-fileupload-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-validator.jar"/>
+	<classpathentry kind="lib" path="lib/geronimo-jta_1.0.1B_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/hessian-3.0.8.jar"/>
+	<classpathentry kind="lib" path="lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/jsp-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jta.jar"/>
+	<classpathentry kind="lib" path="lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="lib/myfaces-1.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/nekohtml-0.9.3-nirvana.jar"/>
+	<classpathentry kind="lib" path="lib/ognl-2.6.5.jar"/>
+	<classpathentry kind="lib" path="lib/poi-2.5.1-final-20040804.jar"/>
+	<classpathentry kind="lib" path="lib/s2-dao-1.0.29.jar"/>
+	<classpathentry kind="lib" path="lib/s2-extension-2.3.9.jar"/>
+	<classpathentry kind="lib" path="lib/s2-extension-2.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="lib/s2-framework-2.3.9.jar"/>
+	<classpathentry kind="lib" path="lib/s2-framework-2.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="lib/s2-jsf-1.0.13.jar"/>
+	<classpathentry kind="lib" path="lib/s2remoting-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl-2.5.0.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/jasper-runtime.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
