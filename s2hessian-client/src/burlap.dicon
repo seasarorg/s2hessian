@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS"?>
-<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
-"http://www.seasar.org/dtd/components.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+	"http://www.seasar.org/dtd/components21.dtd">
 <components>
 	<component name="remoting" class="org.seasar.remoting.common.interceptor.RemotingInterceptor"/>
-	
 	<component class="org.seasar.remoting.caucho.client.BurlapConnector">
 	    <property name="baseURL">new java.net.URL("http://localhost:8080/s2hessian/s2b/")</property>
 	</component>
