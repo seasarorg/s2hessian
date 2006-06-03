@@ -35,13 +35,12 @@ import com.caucho.hessian.server.HessianSkeleton;
 public class S2HessianServlet extends HttpServlet {
 
     private S2Container container;
-    private final String S2HESSIAN_META = "S2Hessian";
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException {
         container = S2ContainerServlet.getContainer();
         String componentName = req.getPathInfo().substring(1);
-        ComponentDef def = getComponentDefNoException(componentName);
-        MetaDef meta = def.getMetaDef(S2HESSIAN_META);
+        ComponentDef def = container.getComponentDef(componentName);
+        MetaDef meta = def.getMetaDef(MetaConstant.META);
         if (meta == null) {
             throw new ServletException("Component Name[" + componentName
                     + "] is not public.");
@@ -58,12 +57,5 @@ public class S2HessianServlet extends HttpServlet {
             throw new ServletException(e);
         }
     }
-    protected ComponentDef getComponentDefNoException(String componentName) {
-        ComponentDef def = null;
-        try {
-            def = container.getComponentDef(componentName);
-        } catch (ComponentNotFoundRuntimeException e) {
-        }
-        return def;
-    }
+
 }

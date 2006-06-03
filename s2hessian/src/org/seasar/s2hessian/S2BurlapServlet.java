@@ -23,6 +23,9 @@ import javax.servlet.ServletException;
 
 import org.seasar.framework.container.factory.SingletonS2ContainerFactory;
 import org.seasar.framework.container.servlet.S2ContainerServlet;
+import org.seasar.framework.container.ComponentDef;
+import org.seasar.framework.container.ComponentNotFoundRuntimeException;
+import org.seasar.framework.container.MetaDef;
 import org.seasar.framework.container.S2Container;
 
 import com.caucho.burlap.io.BurlapInput;
@@ -35,8 +38,14 @@ public class S2BurlapServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException {
         container = S2ContainerServlet.getContainer();
-        String componentName = req.getPathInfo().substring(1);
-        Class componentApi = container.getComponentDef(componentName).getComponentClass();
+                String componentName = req.getPathInfo().substring(1);
+        ComponentDef def = container.getComponentDef(componentName);
+        MetaDef meta = def.getMetaDef(MetaConstant.META);
+        if (meta == null) {
+            throw new ServletException("Component Name[" + componentName
+                    + "] is not public.");
+        }
+        Class componentApi = def.getComponentClass();
         Object component = container.getComponent(componentName);
         BurlapSkeleton skeleton = new BurlapSkeleton(component, componentApi);
 
@@ -48,4 +57,5 @@ public class S2BurlapServlet extends HttpServlet {
             throw new ServletException(e);
         }
     }
+
 }

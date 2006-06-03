@@ -2,43 +2,46 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="WEB-INF/lib/aopalliance.jar"/>
-	<classpathentry kind="lib" path="WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/seasar2"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-beanutils-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-codec-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-collections-3.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-digester-1.5.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-el-1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-fileupload-1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-validator.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/geronimo-j2ee_1.4_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/geronimo-jta_1.0.1B_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/hessian-3.0.8.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/javassist-3.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jsp-2.0.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/jta.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/myfaces-1.0.9.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/nekohtml-0.9.3-nirvana.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/ognl-2.6.5.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/poi-2.5.1-final-20040804.jar"/>
-	<classpathentry kind="lib" path="F:/WK/Tomcat/5.5.9.2/common/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="F:/WK/Tomcat/5.5.9.2/common/lib/jasper-runtime.jar"/>
-	<classpathentry kind="lib" path="F:/WK/Tomcat/5.5.9.2/common/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="F:/jdk1.5.0_06/lib/tools.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/seasar2"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/s2-framework-2.3.9-sources.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/aopalliance.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/commons-beanutils-1.6.1.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/commons-collections-3.1.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/commons-el-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/commons-lang-2.1.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/commons-logging.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/geronimo-jsp_2.0_spec-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/geronimo-jta_1.0.1B_spec-1.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/hsqldb.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/javassist-3.0.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/jstl-1.1.2.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/jta.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/junit-3.8.1.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/log4j-1.2.13.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/nekohtml-0.9.3-nirvana.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/ognl-2.6.7.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/poi-2.5.1-final-20040804.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/s2-dao-1.0.31.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/s2-extension-2.3.9.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/s2-extension-2.3.9-sources.jar"/>
-	<classpathentry kind="lib" path="J:/wk/s2/s2hessian/trunk/s2hessian/WEB-INF/lib/s2-framework-2.3.9.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2-dao-1.0.29.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2-extension-2.3.9.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2-extension-2.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2-framework-2.3.9.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2-framework-2.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2-jsf-1.0.13.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/s2remoting-1.0.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/xercesImpl-2.5.0.jar"/>
 	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/commons-el.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/jasper-compiler.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/jasper-compiler-jdt.jar"/>
 	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/jasper-runtime.jar"/>
 	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/naming-factory.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/naming-factory-dbcp.jar"/>
+	<classpathentry kind="lib" path="J:/wk/tomcat/Tomcat 5.5.17/common/lib/naming-resources.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>

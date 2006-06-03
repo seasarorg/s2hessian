@@ -3,5 +3,6 @@
 	"http://www.seasar.org/dtd/components21.dtd">
 <components>
 	<component name="test" class="org.seasar.s2hessian.example.SeasarTestImpl">
+	    <meta name="s2hessian"/>
 	</component>
 </components>
