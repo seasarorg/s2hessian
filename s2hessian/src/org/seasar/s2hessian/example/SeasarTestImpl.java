@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.*;
+
 
 /**
  * @author shimura
@@ -131,11 +133,11 @@ public class SeasarTestImpl implements SeasarTest {
     }
     public java.sql.Date SqlDateTest(java.sql.Date sd){
     	 String s2=sd.toString();
-    	 java.util.Calendar xcal = java.util.Calendar.getInstance();
-    	 xcal.set(2006,5,4);
-    	 java.util.Date xday = xcal.getTime();
-    	 java.sql.Date sqlday = new java.sql.Date(xday.getTime());
+    	 Calendar cal = Calendar.getInstance(TimeZone.getDefault());
+    	 cal.set(2000, 5, 5);
+    	 java.sql.Date sqlday = new java.sql.Date(cal.getTimeInMillis());
          String s=sqlday.toString();
+         System.out.println(s);
     	return sqlday;
     }
 }
