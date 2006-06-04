@@ -17,6 +17,7 @@ namespace org.seasar.s2hessian.client
 		private void classConvInit()
 		{
             setClassConv(typeof(System.Collections.Hashtable), "java.util.Hashtable");
+            setClassConv(typeof(org.seasar.s2hessian.client.SqlDate), "java.sql.Date");
 
         }
 		public void setClassConv(System.Type type,string s2)

@@ -215,6 +215,7 @@
     <Compile Include="SerializerFactory.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SqlDate.cs" />
     <Compile Include="SqlDateDeserializer.cs">
       <SubType>Code</SubType>
     </Compile>
