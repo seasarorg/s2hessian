@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nethessian.Test", "nethessian.Test\nethessian.Test.csproj", "{C625C0DF-2529-49BC-9AD2-08DEC77443D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nethessian", "..\s2hessian.NET\nethessian.csproj", "{A514FE93-1ADA-4D0F-B16B-CFCFBF3A65D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C625C0DF-2529-49BC-9AD2-08DEC77443D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C625C0DF-2529-49BC-9AD2-08DEC77443D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C625C0DF-2529-49BC-9AD2-08DEC77443D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C625C0DF-2529-49BC-9AD2-08DEC77443D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A514FE93-1ADA-4D0F-B16B-CFCFBF3A65D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A514FE93-1ADA-4D0F-B16B-CFCFBF3A65D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A514FE93-1ADA-4D0F-B16B-CFCFBF3A65D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A514FE93-1ADA-4D0F-B16B-CFCFBF3A65D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

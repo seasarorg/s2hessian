@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\nethessian.Test.Form1.resources
+obj\Debug\nethessian.Test.Properties.Resources.resources
+obj\Debug\nethessian.Test.csproj.GenerateResource.Cache
+bin\Debug\nethessian.Test.exe
+bin\Debug\nethessian.Test.pdb
+bin\Debug\org.seasar.s2hessian.client.dll
+bin\Debug\org.seasar.s2hessian.client.pdb
+obj\Debug\nethessian.Test.exe
+obj\Debug\nethessian.Test.pdb
