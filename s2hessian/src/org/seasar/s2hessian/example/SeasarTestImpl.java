@@ -129,5 +129,14 @@ public class SeasarTestImpl implements SeasarTest {
     public MyObject[] MyObjectArrrayTest(MyObject[] ot){
         return ot;
     }
+    public java.sql.Date SqlDateTest(java.sql.Date sd){
+    	 String s2=sd.toString();
+    	 java.util.Calendar xcal = java.util.Calendar.getInstance();
+    	 xcal.set(2006,5,4);
+    	 java.util.Date xday = xcal.getTime();
+    	 java.sql.Date sqlday = new java.sql.Date(xday.getTime());
+         String s=sqlday.toString();
+    	return sqlday;
+    }
 }
 

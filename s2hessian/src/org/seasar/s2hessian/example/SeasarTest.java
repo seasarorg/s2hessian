@@ -35,4 +35,5 @@ public HashMap hashMap(HashMap ht);
 public BigDecimal bigDecimal(BigDecimal bd);
 public Object[] ObjectArrrayTest(Object[] ot);
 public MyObject[] MyObjectArrrayTest(MyObject[] ot);
+public java.sql.Date SqlDateTest(java.sql.Date sd);
 }
