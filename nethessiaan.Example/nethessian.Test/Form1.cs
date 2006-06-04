@@ -146,7 +146,7 @@ namespace nethessian.Test
             sqldt.setValue(DateTime.Now);
             SqlDate dt = (SqlDate)dnp.invoke("test", "SqlDateTest", typeof(SqlDate), sqldt);
             DateTime dt2 = dt.getValue();
-            textBox2.Text += "Test15 SqlDate 2006/06/04 will return result: ";
+            textBox2.Text += "Test15 SqlDate 2000/06/05 will return result: ";
             textBox2.Text += dt2.ToString();
             textBox2.Text += "\r\n";
         }
