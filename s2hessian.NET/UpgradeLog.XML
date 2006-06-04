@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="nethessian">
+</Property><Property Name="Solution File" Value="D:\JAVA\S2\nethessian.NET2005\nethessian.sln">
+</Property><Property Name="Date" Value="2005年1月17日">
+</Property><Property Name="Time" Value="21:49">
+</Property></Properties><Event ErrorLevel="0" Project="nethessian" Source="nethessian.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="nethessian" Source="nethessian.csproj" Description="変換済み">
+</Event><Event ErrorLevel="0" Project="" Source="nethessian.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="nethessian.sln" Description="変換済み">
+</Event></UpgradeLog>

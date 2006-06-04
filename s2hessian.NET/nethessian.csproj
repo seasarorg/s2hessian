@@ -1,0 +1,251 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A514FE93-1ADA-4D0F-B16B-CFCFBF3A65D0}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>org.seasar.s2hessian.client</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>nethessian</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>org.seasar.hessian.client.TestProxy</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <Name>nunit.framework</Name>
+      <HintPath>C:\Program Files\NUnit 2.2\bin\nunit.framework.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\nunit.framework</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>System.DirectoryServices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractHessianInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AbstractListDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AbstractMapDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArrayDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ArraySerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasicSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChunkReader.cs" />
+    <Compile Include="ClassDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CollectionSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DotNetProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DotNetProxyFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ErrorInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ErrorItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HashTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HessianProtocolException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HessianServiceException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IdentityComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InputStreamSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JavaClassAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JavaDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JavaSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MapSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectRead.cs" />
+    <Compile Include="OutputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParseUtil.cs" />
+    <Compile Include="PeekStreamReader.cs" />
+    <Compile Include="ReplyProcess.cs" />
+    <Compile Include="Serializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SerializerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDateDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlDateSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StackTraceElementDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StringValueDeserializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StringValueSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThrowableSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
