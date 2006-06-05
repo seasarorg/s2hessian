@@ -96,51 +96,71 @@
             <p>S2Hessianを使うと、Seasar2のコンポーネントをWSDLなしにクライアントから簡単に呼び出
 す事ができるようになります。JAVAでRich
 Clientを作る時にはいちいちWSDLを設定する必要がなく、また簡易なプロトコルですのでパフォーマンスも良いと思います。<br>
-
-S2HessianDotNetを使用すれば、C#でSmart Clientを書いて、そこから簡単にSeasar2のコンポーネントを呼び出せます。</p>
+            <a href="./S2HESSIAN.NET.html">
+S2Hessian.Net</a>を使用すれば、C#でSmart Clientを書いて、そこから簡単にSeasar2のコンポーネントを呼び出せます。</p>
 
             <h2><a name="Setup">セットアップ</a></h2>
 
             <p>S2と同様にJDK1.4以上が必要です。サンプルは、<a href="http://jakarta.apache.org/tomcat/">Tomcat</a>と<a href="http://www.sysdeo.com/eclipse/tomcatPlugin.html">Tomcat
-Plugin</a>を使うことを前提にしています。あらかじめインストールして置いてください。S2Hessianを解凍してできた
-s2hessianディレクトリとs2hessian_clientをEclipseに丸ごとインポートしてください。<br>
+Plugin</a>を使うことを前提にしています。あらかじめインストールして置いてください。<a href="./download/s2hessian-0.4.zip">ｓ2hessian</a>と<a href="./download/s2hessian-client-0.4.zip">ｓ2hessian-
+client</a>をDownloadし、解凍してできた
+s2hessianディレクトリとs2hessian-clientをそれぞれEclipseにインポートしてください。</p>
+            <p>
+なおhessian-3.0.8.jarもlibにいれてありますが、下記URLからDownload出来ます。<br>
 
-必要な libは、seasar2のlibと下記URLからDownload出来る hessian-3.0.8.jarで、これらを
-WEB-INF/libに入れてください。<br>
-
-            <a href="http://www.caucho.com/hessian/download/hessian-3.0.8.jar%81@">http://www.caucho.com/hessian/download/hessian-3.0.8.jar</a>　
+            <a href="http://www.caucho.com/hessian/download/hessian-3.0.8.jar">http://www.caucho.com/hessian/download/hessian-3.0.8.jar</a>　</p>
+            <p></p>
+            <h2><a name="Setup"></a>DownLoad</h2>
+            <p><a href="download/s2hessian-0.4.zip">ｓ2hessian</a></p>
+            <p><a href="download/s2hessian-client-0.4.zip">ｓ2hessian-
+client</a>
 　</p>
 
             <h2><a name="SetupAll">使い方</a></h2>
 
-            <p>Tomcatを起動し、s2hessian_clientの
-org.seasar.s2hessian.example.TestClient を実行すると１１ Sampleが走ります。<br>
+            <p>まず
+Serverとして、ｓ２hessianを起動します。この場合Projectを右クリックし、Tomcatプロジェクトのメニューから、Tomcatコ
+ンテキストの更新をクリックしてください。</p>
 
-またorg.seasar.s2hessian.example.AopClientを実行すると、Client側もseasar2のAOPを使用し、
-S2HessianInterceptorでURLを設定し、Proxyを透過的に実行出来ます。</p>
-
-            <h3>org.seasar.s2hessian.example.TestClient</h3>
-
-            <pre>～略～<br>public class TestClient {<br> public static void main(String []args)<br> throws Exception<br> {<br> HessianProxyFactory factory = new HessianProxyFactory();<br> String url = "http://localhost:8090/s2hessian/s2h/test";<br> SeasarTest seasarTest = (SeasarTest) factory.create(SeasarTest.class, url);<br><br> /* Test1 */<br> int ires=seasarTest.intPlus(3,5);<br> System.out.println("Test1 intPlus result: " +ires);<br>～略～</pre>
-
-            <h3>worg.seasar.s2hessian.example.AopClient</h3>
-
-下記 diconファイルにてURLを指定します。
-            <pre>～略～<br>public class TestAop {<br><br> public static void main(String[] args) {<br> <br>	S2Container container = S2ContainerFactory.create("app.dicon");<br>	<br>	SeasarTest seasarTest = (SeasarTest)container.getComponent("testcomp");<br>	/* Test1 */<br>	int ires=seasarTest.intPlus(30,50);<br>	System.out.println("Test1 intPlus result: " +ires);<br>～略～</pre>
-
-            <h3>app.dicon</h3>
-
-下記 diconファイルにてURLを指定します。 なお下半分は、Burlapと言う
-XML形式でのプロトコルを使用する場合のSampleでHessianのみの場合は不要です。
-            <pre style="height: 431px;">&lt;?xml version="1.0" encoding="Shift_JIS"?&gt;<br>&lt;!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"<br>"http://www.seasar.org/dtd/components.dtd"&gt;<br>&lt;components&gt;<br>	&lt;component name="testcomp" class="org.seasar.s2hessian.example.SeasarTest"&gt;<br>	&lt;aspect&gt;<br>	&lt;component class="org.seasar.s2hessian.S2HessianInterceptor"&gt;<br>	&lt;property name="serviceUrl"&gt;"http://localhost:8080/s2hessian/s2h/test"&lt;/property&gt;<br>	&lt;/component&gt;<br>	&lt;/aspect&gt;<br>	&lt;/component&gt;<br>	&lt;component name="testburlap" class="org.seasar.s2hessian.example.SeasarTest"&gt;<br>	&lt;aspect&gt;<br>	&lt;component class="org.seasar.s2hessian.S2BurlapInterceptor"&gt;<br>	&lt;property name="serviceUrl"&gt;"http://localhost:8080/s2hessian/s2b/test"&lt;/property&gt;<br>	&lt;/component&gt;<br>	&lt;/aspect&gt;<br>	&lt;/component&gt;<br>&lt;/components&gt;<br><br></pre>
+            <p>Tomcatを起動し、s2hessian-clientの
+org.seasar.s2hessian.example.TestAOP を実行すると３１ Sampleが走ります。<br>
 
             <br>
 
-            <h2><a name="Server"></a>SERVER側の設定</h2>
+            </p>
+
+            <h2>Serverの設定</h2>
+
+&nbsp;　web.xmlに下記設定がされています。
+            <pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;<br><br>&lt;!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web<br>Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd"&gt;<br><br>&lt;web-app&gt;<br> &lt;servlet&gt;<br> &lt;servlet-name&gt;s2hessian&lt;/servlet-name&gt;<br> &lt;servlet-class&gt;org.seasar.s2hessian.S2HessianServlet&lt;/servlet-class&gt;<br>	&lt;load-on-startup&gt;3&lt;/load-on-startup&gt;<br> &lt;/servlet&gt;<br> &lt;servlet&gt;<br> &lt;servlet-name&gt;s2burlap&lt;/servlet-name&gt;<br> &lt;servlet-class&gt;org.seasar.s2hessian.S2BurlapServlet&lt;/servlet-class&gt;<br>	&lt;load-on-startup&gt;2&lt;/load-on-startup&gt;<br> &lt;/servlet&gt;<br>&lt;servlet&gt;<br> &lt;servlet-name&gt;s2servlet&lt;/servlet-name&gt;<br> &lt;servlet-class&gt;org.seasar.framework.container.servlet.S2ContainerServlet&lt;/servlet-class&gt;<br> &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br> &lt;init-param&gt;<br> &lt;param-name&gt;configPath&lt;/param-name&gt;<br> &lt;param-value&gt;app.dicon&lt;/param-value&gt;<br> &lt;/init-param&gt;<br> &lt;init-param&gt;<br> &lt;param-name&gt;debug&lt;/param-name&gt;<br> &lt;param-value&gt;true&lt;/param-value&gt;<br> &lt;/init-param&gt;<br>&lt;/servlet&gt;<br><br> &lt;servlet-mapping&gt;<br>	&lt;servlet-name&gt;s2hessian&lt;/servlet-name&gt;<br> &lt;url-pattern&gt;/s2h/*&lt;/url-pattern&gt;<br> &lt;/servlet-mapping&gt;<br> &lt;servlet-mapping&gt;<br>	&lt;servlet-name&gt;s2burlap&lt;/servlet-name&gt;<br> &lt;url-pattern&gt;/s2b/*&lt;/url-pattern&gt;<br> &lt;/servlet-mapping&gt;<br> &lt;servlet-mapping&gt;<br> &lt;servlet-name&gt;s2servlet&lt;/servlet-name&gt;<br> &lt;url-pattern&gt;/s2servlet&lt;/url-pattern&gt;<br>	&lt;/servlet-mapping&gt;<br>&lt;/web-app&gt;<br></pre>
+
+ここで、通常使用される s2sevletに加え、s2hession（必要により、s2burlap）が設定されています。<br>
+
+            <br>
+
+次に、app.dicon（あるいは、それから呼び出されているdicon）に、公開するComponentを登録します。公開するものには、meta情
+報として、「s2hessian｣が指定される事が必要です。<br>
+            <br>
+Serverには、たとえば下記のInterｆaceとImpl Programがあるとします。<br>
+            <h3>SeasarTest</h3>
+
+            <pre>～略～<br>public interface SeasarTest {<br>	<br>public int intPlus(int i,int j);<br>public boolean boolTest(boolean b);<br>public long longPlus(long x,long y);<br>public double doublePlus(double x,double y);<br>public String dateCheck1(Date d);<br>public Date dateCheck2();<br>～略～<br>}<br> </pre>
+            <br>
+            <h3>SeasarTestImpl</h3>
+
+            <pre>～略～<br>public class SeasarTestImpl implements SeasarTest {<br>    public int intPlus(int i, int j) {<br><br>        return i+j;<br>    }<br>    public boolean boolTest(boolean b){<br>        return !b;<br>    }<br>    public long longPlus(long x, long y) {<br><br>        return x+y;<br>    }<br>    public double doublePlus(double x, double y) {<br><br>        return x+y;<br>    }<br><br>    public String dateCheck1(Date d) {<br><br>        int m = d.getMonth();<br>        int dd = d.getDate();<br>        int h=d.getHours();<br>        int mm=d.getMinutes();<br>        String dds=d.toLocaleString();<br>        return dds;<br>    }<br>    public String stringCat(String s1, String s2) {<br>        return s1+s2;<br>    }<br>    public int[] intArray(int[] in) {<br><br>        return in;<br>    }<br>    public Hashtable hashTable(Hashtable ht) {<br>        return ht;<br>    }<br>    public ArrayList arrayList(ArrayList ar){<br>        return ar;<br>    }<br>      public Date dateCheck2() {<br>        Date nd=new Date();<br>        return nd;<br>    }<br>～略～<br>}</pre>
 
             <h3>app.dicon</h3>
 
-            <pre>&lt;?xml version="1.0" encoding="Shift_JIS"?&gt;<br>&lt;!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"<br>	"http://www.seasar.org/dtd/components.dtd"<br>&gt;<br>&lt;components&gt;<br>	&lt;component name="test" class="org.seasar.s2hessian.example.SeasarTestImpl"&gt;<br>	&lt;/component&gt;<br>&lt;/components&gt;<br> </pre>
+            <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>&lt;!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"<br>	"http://www.seasar.org/dtd/components21.dtd"&gt;<br>&lt;components&gt;<br>	&lt;component name="test" class="org.seasar.s2hessian.example.SeasarTestImpl"&gt;<br>	&lt;meta name="s2hessian"/&gt;<br>	&lt;/component&gt;<br>&lt;/components&gt;</pre>
+
+            <h2>Clientの設定</h2>
+Clientのapp.diconには、下記の様な設定がされています。
+            <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>&lt;!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"<br>	"http://www.seasar.org/dtd/components21.dtd"&gt;<br>&lt;components&gt;<br>	&lt;component name="remoting" class="org.seasar.remoting.common.interceptor.RemotingInterceptor"/&gt;<br>	<br>	&lt;component class="org.seasar.remoting.caucho.client.HessianConnector"&gt;<br>	    &lt;property name="baseURL"&gt;new java.net.URL("http://localhost:8080/s2hessian/s2h/")&lt;/property&gt;<br>	&lt;/component&gt;<br>	&lt;component name="test" class="org.seasar.s2hessian.example.SeasarTest"&gt;<br>		&lt;aspect&gt;remoting&lt;/aspect&gt;<br>	&lt;/component&gt;<br>&lt;/components&gt;</pre>
+            <h3>下記のCodeがClientのSampleです。</h3>
+            <h3>org.seasar.s2hessian.example.TestAop</h3>
+
+            <pre>～略～<br>public class TestAop {<br><br>    public static void main(String[] args) {<br>        <br>		S2Container container  = S2ContainerFactory.create("app.dicon");<br>		<br>		SeasarTest seasarTest = (SeasarTest)container.getComponent("test");<br>	    /* Test1 */<br>	    int ires=seasarTest.intPlus(30,50);<br>	    System.out.println("Test1 intPlus result: " +ires);<br>	    <br>	    /* Test2 */<br>	    boolean bres=seasarTest.boolTest(true);<br>	    System.out.println("Test2 boolTest result: " +bres);<br><br>～略～</pre>
 
             <h3>SeasarTest</h3>
 
